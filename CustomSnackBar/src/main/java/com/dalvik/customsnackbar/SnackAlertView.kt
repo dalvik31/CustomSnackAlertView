@@ -75,10 +75,17 @@ class SnackAlertView(context: Context?) : LinearLayout(context) {
                 binding.rightIcon.setImageResource(it)
             } ?: run { binding.rightIcon.isVisible = false }
 
-            currentData.message?.let {
-                binding.message.setText(it)
+
+            currentData.customMessage?.let {
+                binding.message.text = it
                 binding.message.isVisible = true
+            } ?: kotlin.run {
+                currentData.message?.let {
+                    binding.message.setText(it)
+                    binding.message.isVisible = true
+                }
             }
+
 
 
             binding.message.setTextColor(

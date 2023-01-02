@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
                 backgroundColor = android.R.color.holo_red_light,
                 textColor = android.R.color.white,
                 message = R.string.app_name,
+                customMessage = "customMessage",
                 leftIconTint = android.R.color.white,
                 rightIconTint = android.R.color.white,
                 rightIcon = com.dalvik.customsnackbar.R.drawable.ic_cancel,
